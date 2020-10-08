@@ -1,8 +1,7 @@
 // build server structure
     // get required modules
-    const express = require("express")
-    const apiRoutes = require("./routes/apiRoutes");
-    const htmlRoutes = require("./routes/htmlRoutes");
+    const express = require("express");
+   
     // configure express
         // set basic properties for server
            
@@ -19,9 +18,10 @@
             app.use(express.json());
         
         // router, tell the server where the information is 
-        app.use(express.static("public"));
-        app.use("/api", apiRoutes)
-        app.use("/", htmlRoutes)
+//------- uncomment these as routes are finished
+        //app.use(express.static("public"));
+        //require("./routes/apiRoutes")(app);
+        require("./routes/htmlRoutes")(app);
 
         // Listener, start the server
         app.listen(PORT, function() {
