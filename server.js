@@ -19,8 +19,8 @@
         
         // router, tell the server where the information is 
 //------- uncomment these as routes are finished
-        //app.use(express.static("public"));
-        //require("./routes/apiRoutes")(app);
+        app.use(express.static("public"));
+        require("./routes/apiRoutes")(app);
         require("./routes/htmlRoutes")(app);
 
         // Listener, start the server
