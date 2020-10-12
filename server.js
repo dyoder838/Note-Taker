@@ -9,7 +9,7 @@
             const app = express();
             
             // set the listening port for the server
-            const PORT = process.env.PORT || 8080;
+            const PORT = process.env.PORT || 3000;
             
             // tell express what to do with what it hears
                 // this tells the express function to recognize the incoming request object as strings or arrays, extended true tell it to use the qs module library
