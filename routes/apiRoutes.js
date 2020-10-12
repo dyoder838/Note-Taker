@@ -34,8 +34,9 @@ module.exports = function(app) {
     app.post("/api/notes", function(req, res) {
         // req.body is the users input, we are calling it newNote, we need to give it a unique id.
         const newNote = req.body;
+        
         // there are many ways to generate a unique id, this one uses a time stamp as an id.
-        let noteId = Date.now();
+        let noteId = String(Date.now());
         
         // add the id to the newNote.
         newNote.id = noteId;
